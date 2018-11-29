@@ -1,6 +1,6 @@
 package compositions;
 
-public class treasure {
+public class Treasure {
     //type - gem, gold, artifact
     //value -
 }

@@ -1,10 +1,10 @@
 package compositions;
 
-public class armour {
+public class Armour {
 
-   // weapon
-   // spell
-    // treasure
+    //name
+    // value
+    //possible extension damage resistance?
 
 
 }

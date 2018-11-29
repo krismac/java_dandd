@@ -1,6 +1,6 @@
 package lands;
 
-public class clubhive {
+public class Clubhive {
 
     //instance
 

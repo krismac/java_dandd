@@ -1,6 +1,6 @@
 package parents;
 
-public abstract class tokens {
+public abstract class Tokens {
 
     //instance
 

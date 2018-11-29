@@ -1,6 +1,6 @@
 package lands;
 
-public class asda {
+public class Forest {
 
     //instance
 
@@ -8,7 +8,7 @@ public class asda {
     //constructor
         //token -
         //enemy -
-        //room power - collapse shelves
+        //room power - hide
 
     //method
 }
