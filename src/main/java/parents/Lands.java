@@ -1,6 +1,6 @@
 package parents;
 
-public abstract class lands {
+public abstract class Lands {
 
     //instance
 
