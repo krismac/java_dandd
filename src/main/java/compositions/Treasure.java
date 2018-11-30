@@ -1,6 +1,26 @@
 package compositions;
 
 public class Treasure {
-    //type - gem, gold, artifact
+
+        protected String name;
+        protected int attackValue;
+        //possible extension damage type
+
+    public Treasure(String name, int attackValue) {
+        this.name = name;
+        this.attackValue = attackValue;
+    }
+
+        public String getName() {
+        return this.name;
+    }
+
+        public int getAttackValue() {
+        return this.attackValue;
+    }
+
+
+
+        //type - gem, gold, artifact
     //value -
 }

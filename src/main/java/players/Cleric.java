@@ -2,6 +2,8 @@ package players;
 
 import compositions.HealingTools;
 import compositions.PowerType;
+import compositions.Armour;
+import compositions.Weapon;
 import parents.Physical;
 
 import java.util.ArrayList;
@@ -11,10 +13,8 @@ public class Cleric extends Physical {
     ArrayList<HealingTools> healingTools;
 
     //constructor
-    public Cleric(String name) {
-        super(name);
-        this.weapon = 8;
-        this.armour = 5;
+    public Cleric(String name, Weapon weapon, Armour armour) {
+        super(name, weapon, armour);
         this.health = 12;
         this.backpack = new ArrayList<>();
         this.healingTools = new ArrayList<>();

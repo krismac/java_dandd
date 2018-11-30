@@ -2,6 +2,7 @@ package players;
 
 import compositions.FamiliarType;
 import compositions.PowerType;
+import compositions.Spell;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,11 +13,13 @@ import static org.junit.Assert.assertEquals;
 public class WarlockTest {
 
    Warlock warlock;
+   Spell spell;
 
 
     @Before
     public void before(){
         warlock = new Warlock("Winston", FamiliarType.CEREBERUS);
+        spell = new Spell("Fireball", 5);
     }
 
     @Test //agility
@@ -41,4 +44,14 @@ public class WarlockTest {
 
     @Test
     public void hasFamiliar() {assertEquals(FamiliarType.CEREBERUS, warlock.getFamiliar());}
+
+    @Test
+    public void hasSpellsList() {assertEquals(0, warlock.getSpellList().size());}
+
+    @Test
+    public void canAddSpellToSpellList()
+    {
+        warlock.addSpellToSpellList(spell);
+        assertEquals(1, warlock.getSpellList().size());}
+
 }
