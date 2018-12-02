@@ -1,12 +1,11 @@
 package players;
 
+import compositions.HealingTool;
 import compositions.PowerType;
 import compositions.Weapon;
 import compositions.Armour;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,11 +14,15 @@ public class ClericTest {
     Cleric cleric;
     Weapon weapon;
     Armour armour;
+    HealingTool potion;
+    HealingTool herb;
 
     @Before
     public void before(){
         armour = new Armour("armour", 4);
         weapon = new Weapon("Mace", 6);
+        potion = new HealingTool("potion", 4);
+        herb = new HealingTool("herb", 2);
         cleric = new Cleric("Cedric", weapon, armour);
 
     }
@@ -51,11 +54,30 @@ public class ClericTest {
 
     @Test
     public void hasArmourName(){
-        assertEquals(armour, cleric.getArmourName());
+        assertEquals("armour", cleric.getArmourName());
     }
 
     @Test
     public void hasArmourDamage(){
         assertEquals(4, cleric.getArmourDamage());
+    }
+
+    @Test
+    public void hasHealingTools() {
+        assertEquals(0, cleric.getHealingTools().size());
+    }
+
+    @Test
+    public void canAddHealingTools() {
+        cleric.addHealingTools(potion);
+        assertEquals(1, cleric.getHealingTools().size());
+    }
+
+    @Test
+    public void canRemoveHealingTools() {
+        cleric.addHealingTools(potion);
+        cleric.addHealingTools(herb);
+        cleric.removeHealingTool(herb);
+        assertEquals(1, cleric.getHealingTools().size());
     }
 }

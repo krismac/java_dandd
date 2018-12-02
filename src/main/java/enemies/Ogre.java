@@ -1,24 +1,25 @@
 package enemies;
 
+import compositions.Armour;
 import compositions.PowerType;
+import compositions.Weapon;
 import parents.Enemy;
 
 public class Ogre extends Enemy {
+    protected Armour armour;
+    protected Weapon weapon;
+
 
     //constructor
-    public Ogre(String name) {
+    public Ogre(String name, Armour armour, Weapon weapon) {
         super(name);
-        this.armour = 8;
+        this.armour = armour;
+        this.weapon = weapon;
         this.health = 14;
         this.power = PowerType.SPELLRESISTANCE;
     }
 
-    //instance
-
-
-    //constructor
-        //armour - 8
-        // power - spell resistance
+    
 
     //method
         //divide divide by 3
