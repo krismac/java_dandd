@@ -58,13 +58,13 @@ public class DragonTest {
     @Test
     public void canFight() {
         dragon.fight(dwarf);
-        assertEquals(1 ,dwarf.getHealth());
+        assertEquals(7 ,dwarf.getHealth());
     }
 
     @Test
     public void fightMultipliersWork() {
     dragon.fight(knight);
-    assertEquals(2, knight.getHealth());
+    assertEquals(3, knight.getHealth());
 }
 
 }

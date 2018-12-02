@@ -21,7 +21,7 @@ public class Knight extends Physical {
     }
 
     public void reduceHealth(int damage) {
-        double newDamage = damage * this.power.getPowerModifier();
+        double newDamage = damage - this.power.getPowerModifier();
         this.health -= newDamage;
     }
 
