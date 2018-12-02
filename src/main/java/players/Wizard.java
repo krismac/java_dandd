@@ -22,4 +22,9 @@ public class Wizard extends Magical {
     //method
     //defensive spell (like shield) multiplier in PowerType
 
+    public void reduceHealth(int damage) {
+        this.health -= (damage * this.power.getPowerModifier());
+    }
+
+
 }

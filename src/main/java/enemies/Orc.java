@@ -1,9 +1,11 @@
 package enemies;
 
+import behaviours.IFight;
 import compositions.Armour;
 import compositions.PowerType;
 import compositions.Weapon;
 import parents.Enemy;
+import parents.Person;
 
 public class Orc extends Enemy {
     protected Weapon weapon;
@@ -42,6 +44,13 @@ public class Orc extends Enemy {
         return this.weapon.getValue();
     }
 
+    public void reduceHealth(int damage) {
+        this.health -= (damage * this.power.getPowerModifier());
+    }
+
+    public void fight(Person person){
+        person.reduceHealth(this.getWeaponValue());
+    }
 
 
 

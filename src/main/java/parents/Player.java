@@ -21,5 +21,9 @@ public abstract class Player extends Person {
         return this.backpack;
     }
 
+    public void increaseHealth(int healValue) {
+        this.health += healValue;
+    }
+
     //take damage
 }

@@ -1,14 +1,17 @@
 package players;
 
+import behaviours.IHeal;
 import compositions.HealingTool;
 import compositions.PowerType;
 import compositions.Armour;
 import compositions.Weapon;
+import parents.Person;
 import parents.Physical;
+import parents.Player;
 
 import java.util.ArrayList;
 
-public class Cleric extends Physical {
+public class Cleric extends Physical implements IHeal {
     ArrayList<HealingTool> healingTools;
 
     //constructor
@@ -32,6 +35,10 @@ public class Cleric extends Physical {
 
     public void removeHealingTool(HealingTool healingTool) {
         this.healingTools.remove(healingTool);
+    }
+
+    public void heal(Player player) {
+        player.increaseHealth(4);
     }
 
 }

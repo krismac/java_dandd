@@ -1,8 +1,9 @@
 package parents;
 
+import behaviours.IFight;
 import compositions.PowerType;
 
-public abstract class Person {
+public abstract class Person implements IFight {
     //instance
     protected int health;
     protected String name;
@@ -24,4 +25,9 @@ public abstract class Person {
     public PowerType getPower() {
         return this.power;
     }
+
+    public void reduceHealth(int damage) {
+        this.health -= damage;
+    }
+
 }

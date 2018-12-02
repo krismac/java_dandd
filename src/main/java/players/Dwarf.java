@@ -20,5 +20,9 @@ public class Dwarf extends Physical {
     }
     //method
 
+    public void reduceHealth(int damage) {
+        this.health -= (damage * this.power.getPowerModifier());
+    }
+
 
 }

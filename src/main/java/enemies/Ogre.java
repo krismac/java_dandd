@@ -1,9 +1,11 @@
 package enemies;
 
+import behaviours.IFight;
 import compositions.Armour;
 import compositions.PowerType;
 import compositions.Weapon;
 import parents.Enemy;
+import parents.Person;
 
 public class Ogre extends Enemy {
     protected Armour armour;
@@ -42,5 +44,15 @@ public class Ogre extends Enemy {
     public int getWeaponValue() {
         return this.weapon.getValue();
     }
+
+    public void fight(Person person){
+        person.reduceHealth(this.getWeaponValue());
+    }
+
+
+    public void reduceHealthSpell(int damage) {
+        this.health -= (damage * this.power.getPowerModifier());
+    }
+
 
 }

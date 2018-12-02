@@ -11,6 +11,6 @@ import parents.Player;
 public interface IFight {
 
 
-    public int fight(Person person);
+    public void fight(Person person);
         //use this.weapon and this.power to manipulate each method.
 }

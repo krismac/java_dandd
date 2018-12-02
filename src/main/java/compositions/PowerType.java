@@ -2,8 +2,8 @@ package compositions;
 
 public enum PowerType {
 
-    DEFEND(0.6), //to incoming attack
-    AGILITY(0.8), //to incoming attack
+    DEFEND(0.8), //to incoming physical attack
+    AGILITY(0.6), //to incoming attack
     SAVAGEATTACK(1.4), //to his attack
     DULLWEAPON(0.8), //to his attack
     DEFENSIVESPELL(0.8), //to incoming attack

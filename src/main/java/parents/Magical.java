@@ -6,7 +6,7 @@ import compositions.Spell;
 import java.util.ArrayList;
 import java.util.BitSet;
 
-public class Magical extends Player {
+public abstract class Magical extends Player {
     //instance
     protected FamiliarType familiar;
     protected ArrayList<Spell> spells;
@@ -34,4 +34,14 @@ public class Magical extends Player {
     public ArrayList<Spell> getSpellList() {
         return this.spells;
     }
+
+    public int getSpellDamage() {
+        return 0;
+    }
+
+    public void fight(Person person){
+        person.reduceHealth(this.getSpellDamage());
+    }
+
+
 }

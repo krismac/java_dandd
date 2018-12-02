@@ -3,7 +3,7 @@ package parents;
 import compositions.Armour;
 import compositions.Weapon;
 
-public class Physical extends Player {
+public abstract class Physical extends Player {
     //instance
     protected Armour armour;
     protected Weapon weapon;
@@ -36,5 +36,9 @@ public class Physical extends Player {
 
     public int getArmourDamage() {
         return this.armour.getValue();
+    }
+
+    public void fight(Person person){
+        person.reduceHealth(this.getWeaponDamage());
     }
 }

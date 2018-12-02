@@ -26,5 +26,6 @@ public abstract class Enemy extends Person {
         return this.power;
     }
 
+
     //take damage(health, powertype, attack)
 }

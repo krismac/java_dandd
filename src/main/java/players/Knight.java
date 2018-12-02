@@ -20,6 +20,11 @@ public class Knight extends Physical {
         this.power = PowerType.DEFEND;
     }
 
+    public void reduceHealth(int damage) {
+        double newDamage = damage * this.power.getPowerModifier();
+        this.health -= newDamage;
+    }
+
     //method
 
 
