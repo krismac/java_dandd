@@ -1,26 +1,11 @@
 package compositions;
 
-public class Treasure {
+import parents.Equipment;
 
-        protected String name;
-        protected int worth;
+public class Treasure extends Equipment {
         //possible extension damage type
 
     public Treasure(String name, int worth) {
-        this.name = name;
-        this.worth = worth;
+        super(name, worth);
     }
-
-        public String getName() {
-        return this.name;
-    }
-
-        public int getWorth() {
-        return this.worth;
-    }
-
-
-
-        //type - gem, gold, artifact
-    //value -
 }

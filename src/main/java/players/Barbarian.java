@@ -1,8 +1,10 @@
 package players;
 
+import behaviours.IFight;
 import compositions.PowerType;
 import compositions.Armour;
 import compositions.Weapon;
+import parents.Enemy;
 import parents.Physical;
 
 import java.util.ArrayList;

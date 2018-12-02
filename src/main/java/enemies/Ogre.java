@@ -28,7 +28,7 @@ public class Ogre extends Enemy {
     }
 
     public int getArmourValue() {
-        return this.armour.getDefensiveValue();
+        return this.armour.getValue();
     }
 
     public Weapon getWeapon() {
@@ -40,7 +40,7 @@ public class Ogre extends Enemy {
     }
 
     public int getWeaponValue() {
-        return this.weapon.getAttackValue();
+        return this.weapon.getValue();
     }
 
 }

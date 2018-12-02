@@ -1,21 +1,12 @@
 package compositions;
 
-public class HealingTool {
+import parents.Equipment;
 
-    protected String name;
-    protected int healValue;
+public class HealingTool extends Equipment {
+
 
     public HealingTool(String name, int healValue) {
-        this.name = name;
-        this.healValue = healValue;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public int getHealValue() {
-        return this.healValue;
+        super(name, healValue);
     }
 
 }

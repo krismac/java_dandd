@@ -51,7 +51,7 @@ public class KnightTest {
 
     @Test
     public void hasArmourName(){
-        assertEquals(armour, knight.getArmourName());
+        assertEquals("armour", knight.getArmourName());
     }
 
     @Test

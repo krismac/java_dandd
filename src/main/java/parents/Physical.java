@@ -27,7 +27,7 @@ public class Physical extends Player {
     }
 
     public int getWeaponDamage() {
-        return this.weapon.getAttackValue();
+        return this.weapon.getValue();
     }
 
     public String getArmourName() {
@@ -35,6 +35,6 @@ public class Physical extends Player {
     }
 
     public int getArmourDamage() {
-        return this.armour.getDefensiveValue();
+        return this.armour.getValue();
     }
 }
