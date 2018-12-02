@@ -19,12 +19,28 @@ public class Ogre extends Enemy {
         this.power = PowerType.SPELLRESISTANCE;
     }
 
-    
+    public Armour getArmour() {
+        return this.armour;
+    }
 
-    //method
-        //divide divide by 3
+    public String getArmourName() {
+        return this.armour.getName();
+    }
+
+    public int getArmourValue() {
+        return this.armour.getDefensiveValue();
+    }
+
+    public Weapon getWeapon() {
+        return this.weapon;
+    }
+
+    public String getWeaponName () {
+        return this.weapon.getName();
+    }
+
+    public int getWeaponValue() {
+        return this.weapon.getAttackValue();
+    }
 
 }
-
-//method
-

@@ -41,13 +41,13 @@ public class BarbarianTest {
 
     @Test
     public void hasWeapon(){
-        assertEquals(weapon, barbarian.getWeapon());}
+        assertEquals(weapon, barbarian.getWeapon());
+    }
+    @Test
+    public void weaponHasName() {assertEquals("Greatsword", barbarian.getWeaponName());}
 
-        @Test
-        public void weaponHasName() {assertEquals("Greatsword", barbarian.getWeaponName());}
-
-        @Test
-        public void weaponHasDamage() {assertEquals(12, barbarian.getWeaponDamage());}
+    @Test
+    public void weaponHasDamage() {assertEquals(12, barbarian.getWeaponDamage());}
 
     @Test
     public void hasName(){
@@ -56,12 +56,22 @@ public class BarbarianTest {
 
     @Test
     public void hasArmourName(){
-        assertEquals(armour, barbarian.getArmourName());
+        assertEquals("armour", barbarian.getArmourName());
     }
 
     @Test
     public void hasArmourDamage(){
         assertEquals(4, barbarian.getArmourDamage());
+    }
+
+    @Test
+    public void canFight(){
+
+    }
+
+    @Test
+    public void canDefend(){
+
     }
 
 }

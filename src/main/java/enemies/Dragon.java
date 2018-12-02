@@ -10,7 +10,6 @@ public class Dragon extends Enemy {
     //constructor
     public Dragon(String name) {
         super(name);
-        this.armour = 0;
         this.health = 20;
         this.power = PowerType.TOUGHSKIN;
         this.breathCharges = 2;

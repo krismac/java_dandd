@@ -25,11 +25,6 @@ public class DragonTest {
         assertEquals(20, dragon.getHealth());
     }
 
-    @Test   //armour - 0
-    public void hasArmour(){
-        assertEquals(0, dragon.getArmour());
-    }
-
     @Test //power - //tough skin 0.8
     public void hasPower(){
         assertEquals(PowerType.TOUGHSKIN, dragon.getPower());
