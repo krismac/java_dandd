@@ -37,14 +37,8 @@ public class Room {
         return this.enemy.getHealth();
     }
 
-    public int fight(Player player, Enemy enemy){
-        
-    }
+//    public int fight(Player player, Enemy enemy){
+//
+//    }
 
-
-
-    //method
-        //fight enemy
-             //win = treasure
-            //lose = health loss
 }
