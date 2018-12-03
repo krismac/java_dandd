@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public abstract class Player extends Person {
     //instance
 
-    protected ArrayList<Tokens> backpack;
+    protected ArrayList<Equipment> backpack;
 
     //constructor
     public Player(String name) {
@@ -17,7 +17,7 @@ public abstract class Player extends Person {
 
     //method
 
-    public ArrayList<Tokens> getBackpack() {
+    public ArrayList<Equipment> getBackpack() {
         return this.backpack;
     }
 
