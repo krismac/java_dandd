@@ -80,4 +80,14 @@ public class ClericTest {
         cleric.removeHealingTool(herb);
         assertEquals(1, cleric.getHealingTools().size());
     }
+
+    @Test
+    public void canHeal() {
+        cleric.addHealingTools(potion);
+        cleric.addHealingTools(herb);
+        cleric.reduceHealth(8);
+        cleric.heal(cleric, potion);
+        assertEquals(8, cleric.getHealth());
+        assertEquals(1, cleric.getHealingTools().size());
+    }
 }

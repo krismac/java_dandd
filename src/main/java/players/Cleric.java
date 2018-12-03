@@ -37,8 +37,14 @@ public class Cleric extends Physical implements IHeal {
         this.healingTools.remove(healingTool);
     }
 
-    public void heal(Player player) {
-        player.increaseHealth(4);
+    public void heal(Player player, HealingTool healingTool) {
+        for(HealingTool item : healingTools) {
+            if (item.getName().equals(healingTool.getName())) {
+                healingTools.remove(item);
+                player.increaseHealth(healingTool.getValue());
+                break;
+            }
+        }
     }
 
 }
