@@ -1,10 +1,13 @@
 package compositions;
 
-public class Weapon {
+import parents.Equipment;
 
-    //name
-    //value
-    //possible extension damage type?
+public class Weapon extends Equipment {
+
+    public Weapon(String name, int attackValue) {
+        super(name, attackValue);
+
+    }
 
 
 }

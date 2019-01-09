@@ -2,9 +2,7 @@ package players;
 
 import compositions.FamiliarType;
 import compositions.PowerType;
-import compositions.Spell;
 import parents.Magical;
-import parents.Tokens;
 
 import java.util.ArrayList;
 

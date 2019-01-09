@@ -1,20 +1,22 @@
 package players;
 
-import compositions.HealingTools;
+import behaviours.IHeal;
+import compositions.HealingTool;
 import compositions.PowerType;
+import compositions.Armour;
+import compositions.Weapon;
+import parents.Person;
 import parents.Physical;
+import parents.Player;
 
 import java.util.ArrayList;
 
-public class Cleric extends Physical {
-    //instance
-    ArrayList<HealingTools> healingTools;
+public class Cleric extends Physical implements IHeal {
+    ArrayList<HealingTool> healingTools;
 
     //constructor
-    public Cleric(String name) {
-        super(name);
-        this.weapon = 8;
-        this.armour = 5;
+    public Cleric(String name, Weapon weapon, Armour armour) {
+        super(name, weapon, armour);
         this.health = 12;
         this.backpack = new ArrayList<>();
         this.healingTools = new ArrayList<>();
@@ -25,6 +27,24 @@ public class Cleric extends Physical {
 
     public ArrayList getHealingTools () {
         return this.healingTools;
+    }
+
+    public void addHealingTools(HealingTool healingTool) {
+        this.healingTools.add(healingTool);
+    }
+
+    public void removeHealingTool(HealingTool healingTool) {
+        this.healingTools.remove(healingTool);
+    }
+
+    public void heal(Player player, HealingTool healingTool) {
+        for(HealingTool item : healingTools) {
+            if (item.getName().equals(healingTool.getName())) {
+                healingTools.remove(item);
+                player.increaseHealth(healingTool.getValue());
+                break;
+            }
+        }
     }
 
 }

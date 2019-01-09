@@ -1,7 +1,9 @@
 package enemies;
 
+import behaviours.IFight;
 import compositions.PowerType;
 import parents.Enemy;
+import parents.Person;
 
 public class Dragon extends Enemy {
     private int breathCharges;
@@ -10,7 +12,6 @@ public class Dragon extends Enemy {
     //constructor
     public Dragon(String name) {
         super(name);
-        this.armour = 0;
         this.health = 20;
         this.power = PowerType.TOUGHSKIN;
         this.breathCharges = 2;
@@ -29,6 +30,18 @@ public class Dragon extends Enemy {
     public String bite() {
         //add takeDamage function once written.
         return "Teeth pierce your skin! Lose 5 health points";
+    }
+
+    public void fight(Person person) {
+        if (this.breathCharges > 1 && !this.breathLastTurn) {
+            this.breatheFire();
+            this.breathCharges -= 1;
+            this.breathLastTurn = true;
+            person.reduceHealth(12);
+        }
+        this.bite();
+        person.reduceHealth(5);
+        this.breathLastTurn = false;
     }
 
 }

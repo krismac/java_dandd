@@ -1,6 +1,8 @@
 package players;
 
 import compositions.PowerType;
+import compositions.Weapon;
+import compositions.Armour;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,15 +13,14 @@ import static org.junit.Assert.assertEquals;
 public class KnightTest {
 
     Knight knight;
+    Weapon weapon;
+    Armour armour;
 
     @Before
     public void before(){
-        knight = new Knight("Pig Perciville");
-    }
-
-    @Test
-    public void hasArmour(){
-        assertEquals(8, knight.getArmour());
+        weapon = new Weapon("Longsword", 10);
+        armour = new Armour("armour", 4);
+        knight = new Knight("Pig Perciville", weapon, armour);
     }
 
     @Test //agility
@@ -40,6 +41,22 @@ public class KnightTest {
     @Test
     public void hasName(){
         assertEquals("Pig Perciville", knight.getName());
+    }
+
+    @Test
+    public void weaponHasName() {assertEquals("Longsword", knight.getWeaponName());}
+
+    @Test
+    public void weaponHasDamage() {assertEquals(10, knight.getWeaponDamage());}
+
+    @Test
+    public void hasArmourName(){
+        assertEquals("armour", knight.getArmourName());
+    }
+
+    @Test
+    public void hasArmourDamage(){
+        assertEquals(4, knight.getArmourDamage());
     }
 
 }

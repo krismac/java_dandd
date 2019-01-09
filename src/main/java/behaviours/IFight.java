@@ -1,10 +1,16 @@
 package behaviours;
 
+import compositions.PowerType;
+import compositions.Spell;
+import compositions.Weapon;
+import parents.Enemy;
+import parents.Equipment;
+import parents.Person;
+import parents.Player;
+
 public interface IFight {
 
-    //spell arraylist of spell classes
 
-    //attack arraylist of weapon classes
-
-
+    public void fight(Person person);
+        //use this.weapon and this.power to manipulate each method.
 }

@@ -2,17 +2,14 @@ package parents;
 
 import compositions.PowerType;
 
-public abstract class Enemy {
+public abstract class Enemy extends Person {
 
     //instance
-    protected int health;
-    protected String name;
-    protected int armour;
-    protected PowerType power;
+
 
     //constructor
     public Enemy (String name) {
-        this.name = name;
+        super(name);
     }
 
     //methods
@@ -25,13 +22,10 @@ public abstract class Enemy {
         return this.name;
     }
 
-    public int getArmour() {
-        return this.armour;
-    }
-
     public PowerType getPower() {
         return this.power;
     }
+
 
     //take damage(health, powertype, attack)
 }

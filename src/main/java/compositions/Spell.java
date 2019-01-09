@@ -1,9 +1,12 @@
 package compositions;
 
-public class Spell
-{
 
-    //name
-    //value
-    //possible extension damage type?
+import parents.Equipment;
+
+public class Spell extends Equipment
+{
+    public Spell(String name, int attackValue) {
+        super(name, attackValue);
+    }
+
 }
